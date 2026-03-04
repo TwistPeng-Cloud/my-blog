@@ -1,14 +1,19 @@
 baseURL = 'https://myblog.wetwist.dpdns.org/'
 languageCode = 'zh-cn'
-title = 'My New Hugo Project'
+title = '小彭奇思妙想'
 theme = 'PaperMod'
 
 [params]
     env = "production"
-    title = "写作空间"
+    title = "小彭奇思妙想"
     description = "练习口琴，记录生活"
     author = "Twist"
 
-# 下面这一段是关键，用来修复你刚才看到的报错
+    # --- 这一段就是新加的“装修”，让首页变帅 ---
+    [params.profileMode]
+        enabled = true
+        title = "小彭奇思妙想"
+        subtitle = "且放白鹿青崖间，须行即骑访名山"
+
 [author]
     name = "Twist"
