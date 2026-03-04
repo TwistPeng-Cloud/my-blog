@@ -1,0 +1,14 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-cn'
+title = 'My New Hugo Project'
+theme = 'PaperMod'
+
+[params]
+    env = "production"
+    title = "写作空间"
+    description = "练习口琴，记录生活"
+    author = "Twist"
+
+# 下面这一段是关键，用来修复你刚才看到的报错
+[author]
+    name = "Twist"
