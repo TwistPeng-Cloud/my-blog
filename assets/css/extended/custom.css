@@ -37,3 +37,13 @@ h1, h2, h3 {
     display: block;
     max-width: 85%;
 }
+
+/* 这是专门用来修复头像比例的 CSS */
+.profile_innner > .profile_img, .profile_img_ {
+    /* 保持原图的宽高比，别让它变形 */
+    object-fit: contain !important; 
+    
+    /* 如果你喜欢正方形或者原图比例，就把下面这两行删了 */
+    border-radius: 50% !important; /* 保留圆形（如果你喜欢原图就改成 0%） */
+    overflow: hidden !important; 
+}
