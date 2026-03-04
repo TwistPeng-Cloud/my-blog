@@ -1,0 +1,39 @@
+/* 背景色 */
+body {
+    background: #f4f1ea !important;
+    font-family: "Georgia", "Noto Serif SC", serif;
+    letter-spacing: 0.03em;
+    line-height: 1.9;
+    color: #2f2f2f;
+}
+
+/* 卡片背景 */
+.post-entry,
+.post-content,
+.main {
+    background: #f8f6f0 !important;
+}
+
+/* 标题更克制一点 */
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* 首字下沉 */
+.post-content p:first-of-type::first-letter {
+    float: left;
+    font-size: 3.2em;
+    line-height: 1;
+    padding-right: 8px;
+    font-weight: bold;
+    color: #b08a5d;
+}
+
+/* 图片呼吸感 */
+.post-content img {
+    margin: 2rem auto;
+    border-radius: 6px;
+    display: block;
+    max-width: 85%;
+}
