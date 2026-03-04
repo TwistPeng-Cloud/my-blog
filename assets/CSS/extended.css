@@ -1,0 +1,21 @@
+:root {
+    --theme: #f4f1ea;
+    --entry: #f8f6f0;
+    --primary: #2f2f2f;
+    --secondary: #6b6b6b;
+}
+
+body {
+    font-family: "Georgia", "Noto Serif SC", serif;
+    letter-spacing: 0.03em;
+    line-height: 1.9;
+}
+
+.post-content p:first-of-type::first-letter {
+    float: left;
+    font-size: 3.2em;
+    line-height: 1;
+    padding-right: 8px;
+    font-weight: bold;
+    color: #b08a5d;
+}
