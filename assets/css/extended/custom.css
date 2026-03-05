@@ -47,3 +47,25 @@ h1, h2, h3 {
     border-radius: 50% !important; /* 保留圆形（如果你喜欢原图就改成 0%） */
     overflow: hidden !important; 
 }
+
+/* 整个网页的背景图设置 */
+body {
+    background-image: url("/images/bg.png"); /* 指向你放图的位置 */
+    background-attachment: fixed;           /* 背景固定，不随滚动条滚动 */
+    background-size: cover;                 /* 强制图片铺满全屏，不留白 */
+    background-position: center;            /* 图片居中显示 */
+    background-repeat: no-repeat;           /* 不重复平铺 */
+}
+
+/* 为了让背景图透出来，我们需要给文章容器加一点透明度 */
+.main {
+    background: rgba(255, 255, 255, 0.85); /* 0.85 是透明度，你可以调成 0.7 变得更透 */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* 如果是深色模式，让容器变黑一点但依然透明 */
+.dark {
+    --theme: rgba(30, 30, 30, 0.8);
+}
