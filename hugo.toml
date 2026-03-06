@@ -15,9 +15,9 @@ theme = 'PaperMod'
         title = "小彭奇思妙想"
         subtitle = "且放白鹿青崖间，须行即骑访名山"
         # --- 下面就是头像的代码 ---
-        imageUrl = "avatar.png" 
-        imageWidth = 150    # 只规定宽度，高度让它自己按比例缩放
-        imageHeight = 0     # 设为 0 或者直接删掉这一行
+        # imageUrl = "avatar.png" 
+        #imageWidth = 150    # 只规定宽度，高度让它自己按比例缩放
+        #imageHeight = 0     # 设为 0 或者直接删掉这一行
 
 [author]
     name = "Twist"
