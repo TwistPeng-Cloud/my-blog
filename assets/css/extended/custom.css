@@ -1,7 +1,7 @@
 /* --- 1. 背景统一设置 --- */
 body {
     /* 把之前的纯色背景删掉，换成图片 */
-    background-image: url("/images/bg.png") !important; 
+    background-image: url("/bg.png") !important; /* 直接找根目录的图 */
     background-attachment: fixed !important;
     background-size: cover !important;
     background-position: center !important;
