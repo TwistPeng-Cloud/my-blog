@@ -1,13 +1,10 @@
 /* --- 1. 背景统一设置 --- */
 body {
-    /* 把之前的纯色背景删掉，换成图片 */
-    background-image: url("/bg.png") !important; /* 直接找根目录的图 */
+    background-image: url("/bg.png") !important; 
     background-attachment: fixed !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    
-    /* 备选底色：万一图片没加载出来，先用这个颜色顶替 */
     background-color: #f4f1ea !important; 
 
     font-family: "Georgia", "Noto Serif SC", serif;
@@ -16,19 +13,32 @@ body {
     color: #2f2f2f;
 }
 
-/* --- 2. 内容区域：透明度是关键 --- */
-/* 这里不能再写纯色死底了，必须用 rgba 才能让背景透出来 */
-.post-entry,
-.post-content,
+/* --- 2. 极致透明方案：让背景彻底露出来 --- */
+
+/* 先把最外层的深色背景彻底去掉 */
 .main {
-    background: rgba(248, 246, 240, 0.85) !important; /* 0.85是透明度，你可以根据喜好调小 */
-    backdrop-filter: blur(4px); /* 加点微弱的毛玻璃，更有书香气息 */
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
-/* --- 3. 字体与排版（保留哥喜欢的样式） --- */
+/* 只给文章列表和内容详情页加一层薄如蝉翼的背景 */
+.post-entry,
+.post-content {
+    /* 0.3 的透明度，背景图会非常清晰 */
+    background: rgba(255, 255, 255, 0.3) !important; 
+    
+    /* 配合强力毛玻璃效果，保证背景再花也不会影响你看字 */
+    backdrop-filter: blur(12px) saturate(180%); 
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    /* 给边框加一点点亮边，增加呼吸感 */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- 3. 字体与排版 --- */
 h1, h2, h3 {
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -59,5 +69,5 @@ h1, h2, h3 {
 
 /* --- 5. 适配深色模式 --- */
 .dark {
-    --theme: rgba(30, 30, 30, 0.8) !important;
+    --theme: rgba(30, 30, 30, 0.4) !important;
 }
